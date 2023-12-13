@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+
+double calculateSum(int n, double x) {
+    double sum = 1.0; // ?????????? ????: 1
+
+    for (int k = 1; k <= n; ++k) {
+        double term = pow(sin(x), k); // ?????????? k-?? ????? ?????????????
+        sum += term; // ????????? ?? ????
+    }
+
+    return sum;
+}
+
+int main() {
+    int n;
+    double x;
+
+    printf("Enter the value n: ");
+    scanf("%d", &n);
+
+    printf("Enter the value x: ");
+    scanf("%lf", &x);
+
+    double result = calculateSum(n, x);
+    printf("Sequence result: %.4f\n", result);
+
+    return 0;
+}
